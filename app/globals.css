@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== Base reset & tema gelap ===== */
+:root {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* ======================================= */
+/* ===== TEMA RAWA BARU YANG LEBIH HIDUP ===== */
+/* ======================================= */
+body {
+  /* Gradient rawa malam hari dengan nuansa biru dan hijau tua */
+  background-color: #0b121c;
+  background-image:
+    /* Cahaya bulan/suasana dari atas */
+    radial-gradient(ellipse 80% 60% at 50% 0%,
+      rgba(34, 197, 94, 0.1),
+      transparent),
+    /* Gradasi utama dari langit malam ke air rawa */
+    linear-gradient(180deg,
+      #0d1b2a 0%,
+      /* Titik tengah dengan warna lebih pekat */
+      #1b263b 40%,
+      #122a2e 100%);
+  color: #e5e7eb;
+  /* Font yang lebih modern dan bersih */
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, Apple Color Emoji, Segoe UI Emoji;
+}
+
+/* Container utama konten berada di atas background */
+.app-root {
+  position: relative;
+  z-index: 10;
+}
+
+/* Utility untuk section anchor (biar nggak ketutup navbar jika ada) */
+[id] {
+  scroll-margin-top: 80px;
+}
+
+/* Pastikan gambar responsif */
+img,
+svg,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Class untuk menempatkan background di belakang semua konten */
+.swamp-bg {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden; /* Mencegah elemen background keluar layar */
+}
+
+/* ===== STYLE BARU UNTUK TOOLTIP ===== */
+.tippy-box[data-theme~='swamp'] {
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  color: #d1d5db; /* gray-300 */
+  border-radius: 0.75rem; /* rounded-xl */
+  font-family: 'Inter', sans-serif;
+}
+.tippy-box[data-theme~='swamp'][data-placement^='top'] > .tippy-arrow::before {
+  border-top-color: rgba(16, 185, 129, 0.4);
+}
+.tippy-box[data-theme~='swamp'][data-placement^='bottom'] > .tippy-arrow::before {
+  border-bottom-color: rgba(16, 185, 129, 0.4);
+}
