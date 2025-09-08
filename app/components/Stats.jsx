@@ -143,7 +143,7 @@ export default function Stats() {
           </motion.div>
         ) : (
           <div className="rounded-2xl border border-emerald-500/30 p-6 text-gray-400">
-            Chart akan muncul otomatis setelah liquidity pool (pair) live.
+            The chart will appear automatically after the liquidity pool (pair) is live.
           </div>
         )}
       </div>
