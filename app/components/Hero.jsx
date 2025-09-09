@@ -6,14 +6,23 @@ import useSoundEffect from '../hooks/useSoundEffect';
 
 const CONTRACT = process.env.NEXT_PUBLIC_CONTRACT || "";
 const PUMPFUN_URL = process.env.NEXT_PUBLIC_PUMPFUN_URL || "https://pump.fun/coin/PEBOOM";
-const TELEGRAM_URL = process.env.NEXT_PUBLIC_X_URL || "https://x.com/thepondboom";
+const TELEGRAM_URL = process.env.NEXT_PUBLIC_TELEGRAM_URL || "https://t.me/PEBOOM";
+const TWITTER_URL = process.env.NEXT_PUBLIC_TWITTER_URL || "https://x.com/thepondboom";
 
 /** Ikon X (Twitter) */
 const XIcon = (props) => (
   <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" {...props}>
-    <path d="M18.245 3H21l-7.29 8.38L22 21h-4.755l-6.02-6.98L5.755 21H3l7.54-8.66L2 3h4.755l5.573 6.47L18.245 3z"/>
+    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
   </svg>
 );
+
+/** Ikon Telegram BARU */
+const TelegramIcon = (props) => (
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" {...props}>
+    <path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.57c-.28 1.13-1.04 1.4-1.74.88l-4.92-3.6-2.38 2.31c-.26.26-.6.39-.91.32z" />
+  </svg>
+);
+
 
 export default function Hero() {
   const [copied, setCopied] = useState(false);
@@ -67,9 +76,15 @@ export default function Hero() {
             Buy $PEBOOM
           </CyberButton>
 
+          {/* PERUBAHAN: Menggunakan Ikon Telegram yang benar */}
           <CyberButton onClick={() => window.open(TELEGRAM_URL, "_blank")} variant="secondary">
-            <XIcon className="w-5 h-5 mr-2" />
+            <TelegramIcon className="w-5 h-5 mr-2" />
             Join Telegram
+          </CyberButton>
+          
+          <CyberButton onClick={() => window.open(TWITTER_URL, "_blank")} variant="secondary">
+            <XIcon className="w-5 h-5 mr-2" />
+            Join X
           </CyberButton>
         </motion.div>
 
