@@ -4,11 +4,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const TELEGRAM_URL = process.env.NEXT_PUBLIC_TELEGRAM_URL || "https://t.me/peboomportal";
 const TWITTER_URL  = process.env.NEXT_PUBLIC_TWITTER_URL  || "https://twitter.com/peboomcoin";
-const TIKTOK_URL   = process.env.NEXT_PUBLIC_TIKTOK_URL   || "https://www.tiktok.com/@peboom";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  // --- PERUBAHAN DI SINI ---
   const navItems = ['About', 'How to Buy', 'Tokenomics', 'Roadmap', 'Meme'];
 
   return (
@@ -51,17 +49,6 @@ export default function Navbar() {
             </div>
             
             <div className="hidden md:flex items-center gap-4">
-              <motion.a
-                href={TIKTOK_URL}
-                target="_blank"
-                rel="noreferrer"
-                whileHover={{ scale: 1.2, rotate: -10 }}
-              >
-                <svg className="w-6 h-6 text-gray-400 hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-2.43.03-4.83-.95-6.43-2.88-1.59-1.92-2.31-4.56-1.9-7.03.39-2.4 1.97-4.47 3.97-5.77.92-.6 1.97-1 3.01-1.13.01-2.89-.01-5.78.01-8.66Z"/>
-                </svg>
-              </motion.a>
-
               <motion.a
                 href={TWITTER_URL}
                 target="_blank"
@@ -114,3 +101,4 @@ export default function Navbar() {
     </motion.div>
   );
 }
+
