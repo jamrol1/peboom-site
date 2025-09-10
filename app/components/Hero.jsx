@@ -4,8 +4,8 @@ import { motion } from 'framer-motion';
 import CyberButton from './CyberButton';
 import useSoundEffect from '../hooks/useSoundEffect';
 
-const CONTRACT = process.env.NEXT_PUBLIC_CONTRACT || "";
-const PUMPFUN_URL = process.env.NEXT_PUBLIC_PUMPFUN_URL || "";
+const CONTRACT = process.env.NEXT_PUBLIC_CONTRACT || "6PJ2PCgUKwCBe38yG5PEZF45Jn9mFGivyi6wMytspump";
+const PUMPFUN_URL = process.env.NEXT_PUBLIC_PUMPFUN_URL || "6PJ2PCgUKwCBe38yG5PEZF45Jn9mFGivyi6wMytspump";
 const TELEGRAM_URL = process.env.NEXT_PUBLIC_TELEGRAM_URL || "https://t.me/PEBOOM";
 const TWITTER_URL = process.env.NEXT_PUBLIC_TWITTER_URL || "https://x.com/thepondboom";
 

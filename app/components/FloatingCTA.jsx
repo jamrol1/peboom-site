@@ -2,7 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const PUMPFUN_URL = process.env.NEXT_PUBLIC_PUMPFUN_URL || "";
+const PUMPFUN_URL = process.env.NEXT_PUBLIC_PUMPFUN_URL || "6PJ2PCgUKwCBe38yG5PEZF45Jn9mFGivyi6wMytspump";
 
 export default function FloatingCTA() {
     return (
