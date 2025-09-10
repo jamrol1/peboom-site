@@ -2,7 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const PUMPFUN_URL = process.env.NEXT_PUBLIC_PUMPFUN_URL || "https://pump.fun/coin/PEBOOM";
+const PUMPFUN_URL = process.env.NEXT_PUBLIC_PUMPFUN_URL || "";
 
 export default function FloatingCTA() {
     return (

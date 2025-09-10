@@ -5,7 +5,7 @@ import CyberButton from './CyberButton';
 import useSoundEffect from '../hooks/useSoundEffect';
 
 const CONTRACT = process.env.NEXT_PUBLIC_CONTRACT || "";
-const PUMPFUN_URL = process.env.NEXT_PUBLIC_PUMPFUN_URL || "https://pump.fun/coin/PEBOOM";
+const PUMPFUN_URL = process.env.NEXT_PUBLIC_PUMPFUN_URL || "";
 const TELEGRAM_URL = process.env.NEXT_PUBLIC_TELEGRAM_URL || "https://t.me/PEBOOM";
 const TWITTER_URL = process.env.NEXT_PUBLIC_TWITTER_URL || "https://x.com/thepondboom";
 

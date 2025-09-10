@@ -8,7 +8,7 @@ async function getDex() {
   if (!QUERY) return null;
   try {
     const r = await fetch(
-      "https://api.dexscreener.com/latest/dex/search?q=" + encodeURIComponent(QUERY),
+    "awfhvmtizbmbrp1whhj8iekwecyx7oqubguougfirzpa" + encodeURIComponent(QUERY),
       { cache: "no-store" }
     );
     if (!r.ok) return null;
