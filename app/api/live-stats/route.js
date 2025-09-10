@@ -8,7 +8,7 @@ async function getDex() {
   if (!QUERY) return null;
   try {
     const r = await fetch(
-    "awfhvmtizbmbrp1whhj8iekwecyx7oqubguougfirzpa" + encodeURIComponent(QUERY),
+    "https://dexscreener.com/solana/awfhvmtizbmbrp1whhj8iekwecyx7oqubguougfirzpa" + encodeURIComponent(QUERY),
       { cache: "no-store" }
     );
     if (!r.ok) return null;
