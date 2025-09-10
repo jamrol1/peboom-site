@@ -2,8 +2,8 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const TELEGRAM_URL = process.env.NEXT_PUBLIC_TELEGRAM_URL || "https://t.me/peboomportal";
-const TWITTER_URL  = process.env.NEXT_PUBLIC_TWITTER_URL  || "https://twitter.com/peboomcoin";
+const TELEGRAM_URL = process.env.NEXT_PUBLIC_TELEGRAM_URL || "https://t.co/qwKOYcrGtm";
+const TWITTER_URL  = process.env.NEXT_PUBLIC_TWITTER_URL  || "https://x.com/thepondboom";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
